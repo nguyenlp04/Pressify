@@ -59,3 +59,9 @@
 ul li a{
     text-decoration:none;
 }
+
+.bg-statistical{
+    background-image: url('./image/istockphoto-1569244819-612x612.jpg'); 
+    background-size: cover; 
+    background-position: center;
+}
