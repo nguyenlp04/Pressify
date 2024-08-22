@@ -35,7 +35,6 @@
 
 }
 .bg-about-us, 
-.bg-footer,
 .btn-custom-app:hover,
 .statistical:hover {
    background-color: transparent;
@@ -64,4 +63,8 @@ ul li a{
     background-image: url('./image/istockphoto-1569244819-612x612.jpg'); 
     background-size: cover; 
     background-position: center;
+}
+.color-icon {
+    color: #FF5E62;
+    background-color: #FF5E62;
 }
