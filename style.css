@@ -66,5 +66,90 @@ ul li a{
 }
 .color-icon {
     color: #FF5E62;
-    background-color: #FF5E62;
+   }
+.bg-icon{
+   background-color: #FF5E62;
+}
+.mobile-menu-active {
+   color: white;
+   background-color: #FF5E62;
+   padding: 0; 
+}
+.nav-link.border-top:hover{
+   background-color: #FF5E62;
+   color: white;
+}
+
+.mobile-menu-active > .nav-link {
+   padding: 0.75rem 1rem; 
+   display: block; 
+   background-color: #FF5E62; 
+}
+
+.mobile-menu .nav-link {
+   padding: 0.75rem 1rem;
+   display: block;
+   /* border-top: 1px solid black; */
+}
+
+
+.hero-container {
+   position: relative;
+   height: 100vh; /* Chiều cao của container bằng 100% chiều cao của viewport trên màn hình lớn */
+   overflow: hidden;
+}
+
+.hero-container video {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%; /* Chiều cao của video bằng 100% container */
+   object-fit: cover; /* Giữ tỷ lệ khung hình của video */
+   opacity: 0.75;
+}
+
+.hero-overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(-45deg, #FF5E62 0%, #FEC983 100%);
+   opacity: 0.8;
+   pointer-events: none; /* Để các phần tử phía trên có thể nhấp được */
+}
+
+.hero-content {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   color: white;
+   z-index: 2;
+   width: 80%;
+}
+
+@media (max-width: 767px) {
+   .hero-content {
+       top: auto; /* Đặt top tự động để phù hợp với chiều cao của nội dung */
+       bottom: 0; /* Đặt phần nội dung ở dưới cùng của màn hình */
+       transform: translate(-50%, 0); /* Loại bỏ điều chỉnh trung tâm */
+       text-align: center; /* Đảm bảo căn giữa văn bản trên màn hình nhỏ */
+       width: 90%; /* Tăng chiều rộng của nội dung để phù hợp hơn trên màn hình nhỏ */
+   }
+   
+   .hero-container {
+       height: auto; /* Đặt chiều cao của container thành auto trên màn hình nhỏ */
+       min-height: 100vh; /* Đảm bảo container có ít nhất chiều cao của viewport */
+   }
+
+   .hero-container video {
+       height: auto; /* Đặt chiều cao của video thành auto để phù hợp với container */
+       min-height: 100vh; /* Đảm bảo video có ít nhất chiều cao của viewport */
+   }
 }

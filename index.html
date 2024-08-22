@@ -1,166 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/59847bd5e5.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="./fontawesome.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
     <!-- Navbar -->
-    <section>
-        <header class="bg-dark">
-            <div class="container-fluid bg-dark p-2 fs-6 lh-lg px-4">
-                <div class="row">
-                    <div class="col text-start">
-                        <a class="navbar-brand text-white" href="#"><i class="fa-regular fa-envelope"></i> info@printme.com</a>
-                    </div>
-                    <div class="col text-center">
-                        <a class="nav-link active text-white" aria-current="page" href="#">Free $30 for your first order</a>
-                    </div>
-                    <div class="col"></div>
+    <header class="bg-dark">
+        <div class="container-fluid bg-dark p-2 fs-6 lh-lg px-4">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 text-start">
+                    <a class="navbar-brand text-white" href="#">
+                        <i class="fa-regular fa-envelope pe-2"></i>info@pressify.us
+                    </a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 text-md-end text-lg-center">
+                    <a class="nav-link active text-white" aria-current="page" href="#">
+                        Free $30 for your first order
+                    </a>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4 text-end">
+                    <!-- Phần tử này sẽ nằm bên phải trên màn hình lớn -->
                 </div>
             </div>
-        </header>
-        <!-- Hero Section -->
-        <div class="position-relative">
-            <!-- Background Image -->
-            <!-- <img src="./image/image.jpg" class="img-fluid w-100 opacity-75" alt="Hero Image"> -->
-            <video class="elementor-background-video-hosted elementor-html5-video img-fluid w-100 opacity-75" autoplay="" muted="" playsinline="" loop="" src="./image/Home-1-Slider-Bg-Vid.mp4"></video>
-            <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: transparent; background-image: linear-gradient(-45deg, #FF5E62 0%, #FEC983 100%); opacity: 0.8;"></div>
-
-            
-            <!-- Overlay Menu -->
-            <nav class="navbar navbar-expand-lg navbar-dark position-absolute w-100 px-4" style="top: 0;">
-                <div class="container-fluid">
-                    <!-- Logo -->
-                    <a class="navbar-brand" href="#">
-                        <img src="./image/logo_PRESSIFY_big.png" height="50px" alt="Logo">
-                    </a>
-                    <!-- Toggler Button -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <!-- Navbar Content -->
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav mx-auto text-uppercase fw-bold fs-6">
-                            <li class="nav-item me-3">
-                                <a class="nav-link text-white menu-active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item me-3">
-                                <a class="nav-link text-white" href="#">About</a>
-                            </li>
-                            <li class="nav-item me-3">
-                                <a class="nav-link text-white" href="#">Printme</a>
-                            </li>
-                            <li class="nav-item me-3">
-                                <a class="nav-link text-white" href="#">Pages</a>
-                            </li>
-                            <li class="nav-item me-3">
-                                <a class="nav-link text-white" href="#">Bulk Orders</a>
-                            </li>
-                        </ul>
-                        <!-- Icons -->
-                        <div class="d-flex align-items-center ms-3">
-                            <a class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center text-white" style="width: 40px; height: 40px;" href="#">
-                                <i class="fa-regular fa-user"></i>
-                            </a>
-                            <a class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center text-white ms-2" style="width: 40px; height: 40px;" href="#">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </a>
-                            <a class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center text-white ms-2" style="width: 40px; height: 40px;" href="#">
-                                <i class="fa-regular fa-heart"></i>
-                            </a>
-                        </div>
+        </div>
+    </header>
+    <section class="hero-container">
+        
+        <!-- Background Video -->
+        <video class="elementor-background-video-hosted elementor-html5-video" autoplay muted playsinline loop src="./image/Home-1-Slider-Bg-Vid.mp4"></video>
+        <div class="hero-overlay"></div>
+        <!-- Overlay Menu -->
+        <nav class="navbar navbar-expand-lg navbar-dark position-absolute w-100 px-4" style="top: 0;">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="./image/logo_PRESSIFY_big.png" height="50px" alt="Logo">
+                </a>
+                <!-- Toggler Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar Content -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto text-uppercase fw-bold fs-6">
+                        <li class="nav-item me-3">
+                            <a class="nav-link text-white menu-active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link text-white" href="#">About</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link text-white" href="#">Printme</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link text-white" href="#">Pages</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link text-white" href="#">Bulk Orders</a>
+                        </li>
+                    </ul>
+                    <!-- Icons -->
+                    <div class="d-flex align-items-center ms-3">
+                        <a class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center text-white" style="width: 40px; height: 40px;" href="#">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+                        <a class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center text-white ms-2" style="width: 40px; height: 40px;" href="#">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                        <a class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center text-white ms-2" style="width: 40px; height: 40px;" href="#">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
                     </div>
                 </div>
-            </nav>
-
-            <div class="position-absolute top-50 start-50 translate-middle d-flex flex-row align-items-center px-4" style="width: 80%;">
+            </div>
+        </nav>
+        <!-- Offcanvas Menu -->
+        <div class="offcanvas offcanvas-end text-bg-light" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="" id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 mobile-menu">
+                    <li class="nav-item mobile-menu-active">
+                        <a class="nav-link border-top " aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link border-top" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link border-top" href="#">Printme</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link border-top" href="#">Pages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link border-top" href="#">Bulk Orders</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Hero Content -->
+        <div class="hero-content container-fluid">
+            <div class="row">
                 <!-- Text Box -->
-                <div class="col-6 text-start me-4 flex-grow-1">
-                    <span class="text-white text-uppercase d-block mb-2">Digital Printing Service</span>
-                    <h1 class="text-white fw-bold fs-1">Truly Inspired Personal & Promotional Gifts</h1>
-                    <p class="text-white fs-6">Morbi at faucibus nunc. Vivamus rhoncus placerat rhoncus. Cras et magna magna. Proin a erat commodo, pretium diam id, volutpat lacus. Vestibulum mattis rutrum mauris.</p>
-                    <div class="d-flex text-white fs-5">
-                        <div class="me-5">
-                            <i class="fa-solid fa-laptop-code me-2 fs-3"></i>Over All 50+ Services
-                        </div>
-                        <div>
-                            <i class="fa-solid fa-laptop-code me-2 fs-3"></i>Over All 50+ Services
+                <div class="col-12 col-md-6 d-flex align-items-center text-box">
+                    <div class="text-content">
+                        <span class="text-uppercase d-block mb-2">Digital Printing Service</span>
+                        <h1 class="fw-bold fs-1 fs-md-2 fs-sm-3">Truly Inspired Personal & Promotional Gifts</h1>
+                        <p class="fs-6 fs-md-5 fs-sm-6">Specializing in custom printing, particularly for t-shirts, and offering warehouse rental services, we provide comprehensive solutions tailored to your needs.</p>
+                        <div class="d-flex text-white fs-5 fs-md-6">
+                            <div class="me-5">
+                                <i class="fa-solid fa-laptop-code me-2 fs-3 fs-md-4 fs-sm-5"></i>50+ Big Partners
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-laptop-code me-2 fs-3 fs-md-4 fs-sm-5"></i>500k+ Item Processed
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- Image -->
-                <div class="col-6 flex-grow-1">
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
                     <img src="./image/Home-1-Banner-3.png" class="img-fluid" alt="Additional Image">
                 </div>
             </div>
         </div>
     </section>
+    
     <section class="py-5">
         <div class="container">
             <h1 class="text-center fw-bold mb-4">Print Solutions</h1>
             <div class="text-center mx-auto mb-5" style="max-width: 800px;">
-                Cras et magna magna. Proin a erat commodo, pretium diam id, volutpat lacus. Vestibulum mattis rutrum mauris. Morbi at faucibus nunc. Vivamus rhoncus placerat rhoncus.
+                Cras et magna magna. Proin a erat commodo, pretium diam id, volutpat lacus. Vestibulum mattis rutrum
+                mauris. Morbi at faucibus nunc. Vivamus rhoncus placerat rhoncus.
             </div>
         </div>
         <div class="container">
             <div class="row g-4">
                 <!-- Card 1 -->
-                <div class="col-md-3">
-                    <div class="card border-0">
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="card border-0 d-flex flex-column">
                         <img src="./image/home-1-img-box-img01.jpg" class="card-img-top rounded-3" alt="Image 1">
-                        <div class="card-body">
+                        <div class="card-body text-center">
                             <h5 class="card-title text-uppercase fw-bold mb-3">1. Advertisements</h5>
-                            <p class="card-text text-uppercase mb-0 d-flex align-items-center">
+                            <p class="card-text text-uppercase mb-0 d-flex align-items-center justify-content-center">
                                 View More <i class="fa-solid fa-caret-right fs-3 ms-2"></i>
                             </p>
                         </div>
                     </div>
                 </div>
                 <!-- Card 2 -->
-                <div class="col-md-3">
-                    <div class="card border-0">
-                        <div class="card-body">
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="card border-0 d-flex flex-column">
+                        <img src="./image/home-1-img-box-img02.jpg" class="card-img-top rounded-3" alt="Image 2">
+                        <div class="card-body text-center">
                             <h5 class="card-title text-uppercase fw-bold mb-3">2. T-shirt Printing</h5>
-                            <p class="card-text text-uppercase mb-0 d-flex align-items-center">
+                            <p class="card-text text-uppercase mb-0 d-flex align-items-center justify-content-center">
                                 View More <i class="fa-solid fa-caret-right fs-3 ms-2"></i>
                             </p>
                         </div>
-                        <img src="./image/home-1-img-box-img02.jpg" class="card-img-bottom rounded-3" alt="Image 2">
                     </div>
                 </div>
                 <!-- Card 3 -->
-                <div class="col-md-3">
-                    <div class="card border-0">
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="card border-0 d-flex flex-column">
                         <img src="./image/home-1-img-box-img03.jpg" class="card-img-top rounded-3" alt="Image 3">
-                        <div class="card-body">
+                        <div class="card-body text-center">
                             <h5 class="card-title text-uppercase fw-bold mb-3">3. Books Printing</h5>
-                            <p class="card-text text-uppercase mb-0 d-flex align-items-center">
+                            <p class="card-text text-uppercase mb-0 d-flex align-items-center justify-content-center">
                                 View More <i class="fa-solid fa-caret-right fs-3 ms-2"></i>
                             </p>
                         </div>
                     </div>
                 </div>
                 <!-- Card 4 -->
-                <div class="col-md-3">
-                    <div class="card border-0">
-                        <div class="card-body">
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="card border-0 d-flex flex-column">
+                        <img src="./image/home-1-img-box-img04.jpg" class="card-img-top rounded-3" alt="Image 4">
+                        <div class="card-body text-center">
                             <h5 class="card-title text-uppercase fw-bold mb-3">4. Packaging Bag</h5>
-                            <p class="card-text text-uppercase mb-0 d-flex align-items-center">
+                            <p class="card-text text-uppercase mb-0 d-flex align-items-center justify-content-center">
                                 View More <i class="fa-solid fa-caret-right fs-3 ms-2"></i>
                             </p>
                         </div>
-                        <img src="./image/home-1-img-box-img04.jpg" class="card-img-bottom rounded-3" alt="Image 4">
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
     <section class="py-5">
         <div class="container">
             <div class="position-relative">
@@ -169,74 +207,59 @@
                     <div class="card-body" style="padding: 80px">
                         <div class="container">
                             <div class="row mb-5">
+                                <!-- Image Column -->
+                                <div class="col-md-5 mb-4 position-relative d-flex align-items-center order-md-1">
+                                    <!-- Image Container -->
+                                    <div class="position-relative">
+                                        <!-- Image -->
+                                        <img src="./image/home-01-portfolio-01.png" class="img-fluid rounded" alt="Get in Touch Image">
+                                        <!-- Dark Overlay on Image -->
+                                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 rounded"></div>
+                                    </div>
+                                    <!-- Overlay Content -->
+                                    <div class="position-absolute top-0 end-0 p-2 text-white rounded" style="max-width: 50%; width: auto;">
+                                        <div class="row">
+                                            <!-- Second Column -->
+                                            <div class="col-8">
+                                                <p class="mb-0">500k+ happy customers</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <!-- Text Column -->
-                                <div class="col-md-7 mb-5">
+                                <div class="col-md-7 mb-5 d-flex flex-column justify-content-center order-md-0">
                                     <h2 class="fs-1 fw-bold">About Us</h2>
-                                    <p>Praesent eget viverra ipsum. Duis ultricies rhoncus tempor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras eget nulla sagittis, congue nibh ut, imperdiet nibh. Duis metus odio, ullamcorper id dictum vitae, tincidunt a ante. Pellentesque ac sapien id nisl pulvinar mollis sed quis libero. Nam cursus orci ac eros maximus aliquam. In hac habitasse platea dictumst.</p>
-                                    <p>Suspendisse molestie maximus rhoncus. Proin sit amet porttitor libero, in mollis ex. Vivamus lobortis purus velit, vitae sodales augue ultrices non. Donec egestas in neque non Praesent eget viverra ipsum. Duis ultricies rhoncus tempor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras eget nulla sagittis, congue nibh ut, imperdiet nibh.</p>
-                                    <button type="button" class="btn btn-lg d-flex align-items-center btn-custom my-4">
-                                        Get in Touch <i class="fa-solid fa-caret-right fs-3 ms-2"></i>
-                                    </button>
-
+                                    <p>Based in Texas, we're inspired by our state's dynamic culture and diverse community. Our team is committed to exceptional customer service, offering fast support and utilizing modern production systems like DTF technology for swift, 24-hour production. With our efficient tracking and management system, we ensure your t-shirt fulfillment experience is seamless and exceeds expectations. Specializing in custom printing, particularly for t-shirts, and offering warehouse rental services, we provide comprehensive solutions tailored to your needs.</p>
+                                    <div class="mb-4">
+                                        <button type="button" class="btn btn-lg d-flex align-items-center btn-custom-app">
+                                            Get in Touch <i class="fa-solid fa-caret-right fs-3 ms-2"></i>
+                                        </button>
+                                    </div>
                                     <div class="d-flex align-items-center text-white fs-5">
                                         <!-- Call Us Item -->
                                         <div class="d-flex align-items-center me-5">
-                                            <a class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center text-white me-2" style="width: 40px; height: 40px;" href="#">
+                                            <a class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center text-white me-2"
+                                                style="width: 40px; height: 40px;" href="#">
                                                 <i class="fa-solid fa-phone"></i>
                                             </a>
                                             <div class="fs-6">
                                                 <div>Call Us Anytime:</div>
-                                                <div>+00 123 456789</div>
+                                                <div>+(832) 699-6882</div>
                                             </div>
                                         </div>
-                        
                                         <!-- Email Us Item -->
                                         <div class="d-flex align-items-center">
-                                            <a class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center text-white me-2" style="width: 40px; height: 40px;" href="#">
+                                            <a class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center text-white me-2"
+                                                style="width: 40px; height: 40px;" href="#">
                                                 <i class="fa-regular fa-envelope"></i>
                                             </a>
                                             <div class="fs-6">
                                                 <div>Email Us Anytime:</div>
-                                                <div>info@example.com</div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    
-                                    
-                                    <!-- <p><strong>Call Us Anytime:</strong> +00 123 456789</p>
-                                    <p><strong>Email Us Anytime:</strong> info@example.com</p> -->
-                                </div>
-                                
-                                <!-- Image Column -->
-                                <div class="col-md-5 mb-4 position-relative">
-                                    <!-- Image Container -->
-                                    <div class="position-relative">
-                                        <!-- Image -->
-                                        <img src="./image/home-01-portfolio-01.png" class="img-fluid" alt="Get in Touch Image">
-                                
-                                        <!-- Dark Overlay on Image -->
-                                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
-                                    </div>
-                                
-                                    <!-- Overlay Content -->
-                                    <div class="position-absolute top-0 end-0 p-2 text-white rounded" style="max-width: 50%; width: auto;">
-                                        <div class="row">
-                                            <!-- First Column -->
-                                            <div class="col-4 mb-1 fw-bold">
-                                                <h5 class="mb-0">25+</h5>
-                                                <p class="mb-0">Years</p>
-                                            </div>
-                                            <!-- Second Column -->
-                                            <div class="col-8">
-                                                <p class="mb-0">of Experience in Printing Services</p>
+                                                <div>info@pressify.us</div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                
-                                
                             </div>
                         </div>
                     </div>
@@ -266,7 +289,6 @@
                                 <i class="fa-solid fa-star text-danger me-1"></i>
                                 5 Rated App On Reviews
                             </div>
-                           
                             <div class="row">
                                 <!-- First Card -->
                                 <div class="col-md-6 mb-4">
@@ -279,13 +301,13 @@
                                             </button>
                                             <img src="./image/qr-app.png" width="90px" alt="">
                                             <div class="position-absolute bottom-0 end-0">
-                                                <div class="icon-app bg-dark d-flex align-items-center justify-content-center" style="border-radius: 10% 0 10% 0">                                                    <i class="fa-brands fa-apple p-2 text-white" style="font-size: 60px"></i>
+                                                <div class="icon-app bg-dark d-flex align-items-center justify-content-center" style="border-radius: 10% 0 10% 0">
+                                                    <i class="fa-brands fa-apple p-2 text-white" style="font-size: 60px"></i>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                    
                                 <!-- Second Card -->
                                 <div class="col-md-6 mb-4">
                                     <div class="card card-custom border-0 bg-app">
@@ -299,416 +321,468 @@
                                             <div class="position-absolute bottom-0 end-0">
                                                 <div class="icon-app bg-dark d-flex align-items-center justify-content-center" style="border-radius: 10% 0 10% 0">
                                                     <i class="fa-brands fa-android p-2 text-white" style="font-size: 60px"></i>
-                                                </d>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    
     <section class="py-5 bg-statistical" style="margin-top: 350px; ">
         <div class="container">
             <h1 class="fw-bold mb-4">Largest Printing Company</h1>
-            
             <div class="row mt-4">
                 <!-- Row 1 -->
-                <div class="col-md-4 mb-4">
-                  <div class="card shadow-none statistical border-0">
-                    <div class="card-body">
-                      <h1 class="fw-lighter" style="font-size: 70px;">95%</h1>
-                      <h4 class="fw-bold">Self Customized Design</h4>
-                      <p class="card-text">Quisque porttitor dolor non mi cursus consequat. Integer lacus augue, convallis id rhoncus sit amet, volutpat quis ante vulputate at Bibendum.</p>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card shadow-none statistical border-0">
+                        <div class="card-body">
+                            <h1 class="fw-lighter" style="font-size: 70px;">95%</h1>
+                            <h4 class="fw-bold">Self Customized Design</h4>
+                            <p class="card-text">Quisque porttitor dolor non mi cursus consequat. Integer lacus augue,
+                                convallis id rhoncus sit amet, volutpat quis ante vulputate at Bibendum.</p>
+                        </div>
                     </div>
-                  </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
                     <div class="card shadow-none statistical border-0">
-                      <div class="card-body">
-                        <h1 class="fw-lighter" style="font-size: 70px;">95%</h1>
-                        <h4 class="fw-bold">Self Customized Design</h4>
-                        <p class="card-text">Quisque porttitor dolor non mi cursus consequat. Integer lacus augue, convallis id rhoncus sit amet, volutpat quis ante vulputate at Bibendum.</p>
-                      </div>
+                        <div class="card-body">
+                            <h1 class="fw-lighter" style="font-size: 70px;">95%</h1>
+                            <h4 class="fw-bold">Self Customized Design</h4>
+                            <p class="card-text">Quisque porttitor dolor non mi cursus consequat. Integer lacus augue,
+                                convallis id rhoncus sit amet, volutpat quis ante vulputate at Bibendum.</p>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-md-4 mb-4">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
                     <div class="card shadow-none statistical border-0">
-                      <div class="card-body">
-                        <h1 class="fw-lighter" style="font-size: 70px;">95%</h1>
-                        <h4 class="fw-bold">Self Customized Design</h4>
-                        <p class="card-text">Quisque porttitor dolor non mi cursus consequat. Integer lacus augue, convallis id rhoncus sit amet, volutpat quis ante vulputate at Bibendum.</p>
-                      </div>
+                        <div class="card-body">
+                            <h1 class="fw-lighter" style="font-size: 70px;">95%</h1>
+                            <h4 class="fw-bold">Self Customized Design</h4>
+                            <p class="card-text">Quisque porttitor dolor non mi cursus consequat. Integer lacus augue,
+                                convallis id rhoncus sit amet, volutpat quis ante vulputate at Bibendum.</p>
+                        </div>
                     </div>
-                  </div>
-              </div>
-              
-              <div class="row">
+                </div>
+            
+           
                 <!-- Row 2 -->
-                <div class="col-md-4 mb-4">
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
                     <div class="card shadow-none statistical border-0">
-                      <div class="card-body">
-                        <h1 class="fw-lighter" style="font-size: 70px;">95%</h1>
-                        <h4 class="fw-bold">Self Customized Design</h4>
-                        <p class="card-text">Quisque porttitor dolor non mi cursus consequat. Integer lacus augue, convallis id rhoncus sit amet, volutpat quis ante vulputate at Bibendum.</p>
-                      </div>
+                        <div class="card-body">
+                            <h1 class="fw-lighter" style="font-size: 70px;">95%</h1>
+                            <h4 class="fw-bold">Self Customized Design</h4>
+                            <p class="card-text">Quisque porttitor dolor non mi cursus consequat. Integer lacus augue,
+                                convallis id rhoncus sit amet, volutpat quis ante vulputate at Bibendum.</p>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-md-4 mb-4">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
                     <div class="card shadow-none statistical border-0">
-                      <div class="card-body">
-                        <h1 class="fw-lighter" style="font-size: 70px;">95%</h1>
-                        <h4 class="fw-bold">Self Customized Design</h4>
-                        <p class="card-text">Quisque porttitor dolor non mi cursus consequat. Integer lacus augue, convallis id rhoncus sit amet, volutpat quis ante vulputate at Bibendum.</p>
-                      </div>
+                        <div class="card-body">
+                            <h1 class="fw-lighter" style="font-size: 70px;">95%</h1>
+                            <h4 class="fw-bold">Self Customized Design</h4>
+                            <p class="card-text">Quisque porttitor dolor non mi cursus consequat. Integer lacus augue,
+                                convallis id rhoncus sit amet, volutpat quis ante vulputate at Bibendum.</p>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-md-4 mb-4">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
                     <div class="card shadow-none statistical border-0">
-                      <div class="card-body">
-                        <h1 class="fw-lighter" style="font-size: 70px;">95%</h1>
-                        <h4 class="fw-bold">Self Customized Design</h4>
-                        <p class="card-text">Quisque porttitor dolor non mi cursus consequat. Integer lacus augue, convallis id rhoncus sit amet, volutpat quis ante vulputate at Bibendum.</p>
-                      </div>
+                        <div class="card-body">
+                            <h1 class="fw-lighter" style="font-size: 70px;">95%</h1>
+                            <h4 class="fw-bold">Self Customized Design</h4>
+                            <p class="card-text">Quisque porttitor dolor non mi cursus consequat. Integer lacus augue,
+                                convallis id rhoncus sit amet, volutpat quis ante vulputate at Bibendum.</p>
+                        </div>
                     </div>
-                  </div>
-              </div>
+                </div>
         </div>
+    </div>
     </section>
     <section class="py-5">
         <div class="container">
             <h1 class="text-center fw-bold mb-4">Our Team</h1>
             <div class="text-center mx-auto mb-5" style="max-width: 800px;">
                 We are a group of innovative, experienced, and proficient teams. You will love to collaborate with us.
-        </div>
-        <div class="container">
-            <div class="row g-3">
-                <!-- Card 1 -->
-                <div class="col-md-4">
-                    <div class="card border-0">
-                        <img src="./image/henry2.jpeg" class="card-img-top rounded-3" alt="Image 1">
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-uppercase fw-bold mb-3">Henry Le</h5>
-                            <p class="card-text text-uppercase mb-0">
-                                Chairman
-                            </p>
+            </div>
+            <div class="container">
+                <div class="row g-3">
+                    <!-- Card 1 -->
+                    <div class="col-md-4">
+                        <div class="card border-0">
+                            <img src="./image/henry2.jpeg" class="card-img-top rounded-3" alt="Image 1">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-uppercase fw-bold mb-3">Henry Le</h5>
+                                <p class="card-text text-uppercase mb-0">
+                                    Chairman
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="col-md-4">
-                    <div class="card border-0">
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-uppercase fw-bold mb-3">Kelly Nguyen</h5>
-                            <p class="card-text text-uppercase mb-0">
-                                Vice President
-                            </p>
+                    <!-- Card 2 -->
+                    <div class="col-md-4">
+                        <div class="card border-0">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-uppercase fw-bold mb-3">Kelly Nguyen</h5>
+                                <p class="card-text text-uppercase mb-0">
+                                    Vice President
+                                </p>
+                            </div>
+                            <img src="./image/kelly2.jpeg" class="card-img-bottom rounded-3" alt="Image 2">
                         </div>
-                        <img src="./image/kelly2.jpeg" class="card-img-bottom rounded-3" alt="Image 2">
                     </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="col-md-4">
-                    <div class="card border-0">
-                        <img src="./image/dung.png" class="card-img-top rounded-3" alt="Image 3">
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-uppercase fw-bold mb-3">Thuy Dung</h5>
-                            <p class="card-text text-uppercase mb-0">
-                                Head of Growth
-                            </p>
+                    <!-- Card 3 -->
+                    <div class="col-md-4">
+                        <div class="card border-0">
+                            <img src="./image/dung.png" class="card-img-top rounded-3" alt="Image 3">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-uppercase fw-bold mb-3">Thuy Dung</h5>
+                                <p class="card-text text-uppercase mb-0">
+                                    Head of Growth
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <section class="py-5">
         <div class="container">
             <h1 class="text-center fw-bold mb-4">Customer's Feedbacks</h1>
             <div class="text-center mx-auto mb-5" style="max-width: 800px;">
-                Rras et magna magna. Proin a erat commodo, pretium diam id, volutpat lacus. Vestibulum mattis rutrum mauris. Morbi at faucibus nunc. Vivamus rhoncus placerat rhoncus.
+                Rras et magna magna. Proin a erat commodo, pretium diam id, volutpat lacus. Vestibulum mattis rutrum
+                mauris. Morbi at faucibus nunc. Vivamus rhoncus placerat rhoncus.
             </div>
-        
-
-        <div class="row mt-4">
-            <!-- Row 1 -->
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body p-4" style="background-color: #FFF1F1;">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="avatar me-4">
-                                    <img src="./image/customer-image-02.jpg" width="50px" class="rounded-circle" alt="">
+            <div class="row mt-4">
+                <!-- Row 1 -->
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-4" style="background-color: #FFF1F1;">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="avatar me-4">
+                                        <img src="./image/customer-image-02.jpg" width="50px" class="rounded-circle"
+                                            alt="">
+                                    </div>
+                                    <div class="name">
+                                        <h5 class="card-title fw-bold">Viktorya Katar</h5>
+                                        <h6 class="card-subtitle text-muted">- Manager</h6>
+                                    </div>
                                 </div>
-                                <div class="name">
-                                    <h5 class="card-title fw-bold">Viktorya Katar</h5>
-                                    <h6 class="card-subtitle text-muted">- Manager</h6>
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50"
+                                        height="50">
+                                        <path
+                                            d="M42.82,51.76c-.34,14.06-6.8,25.08-18.38,33a39.22,39.22,0,0,1-22,6.87c-.24,0-.51,0-.75,0V77.85c1.35-.08,2.71,0,4-.24a27.5,27.5,0,0,0,22.94-22c.35-1.69.41-3.43.61-5.22H1.71V9.27c.34,0,.69-.06,1-.06H42.88c0,.33,0,.53,0,.75C42.92,23.89,43.16,37.83,42.82,51.76Z"
+                                            fill="#FF6A66"></path>
+                                        <path
+                                            d="M97.86,50.26c-.37,17.82-8.94,30.54-25,38.09a36.72,36.72,0,0,1-15.32,3.27h-.7V78a27.33,27.33,0,0,0,22.1-11.38,26.72,26.72,0,0,0,5.28-16.14H56.77V9.27H97.92v1C97.92,23.58,98.14,36.92,97.86,50.26Z"
+                                            fill="#FF6A66"></path>
+                                    </svg>
                                 </div>
                             </div>
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50">
-                                    <path d="M42.82,51.76c-.34,14.06-6.8,25.08-18.38,33a39.22,39.22,0,0,1-22,6.87c-.24,0-.51,0-.75,0V77.85c1.35-.08,2.71,0,4-.24a27.5,27.5,0,0,0,22.94-22c.35-1.69.41-3.43.61-5.22H1.71V9.27c.34,0,.69-.06,1-.06H42.88c0,.33,0,.53,0,.75C42.92,23.89,43.16,37.83,42.82,51.76Z" fill="#FF6A66"></path>
-                                    <path d="M97.86,50.26c-.37,17.82-8.94,30.54-25,38.09a36.72,36.72,0,0,1-15.32,3.27h-.7V78a27.33,27.33,0,0,0,22.1-11.38,26.72,26.72,0,0,0,5.28-16.14H56.77V9.27H97.92v1C97.92,23.58,98.14,36.92,97.86,50.26Z" fill="#FF6A66"></path>
-                                </svg>
-                            </div>
+                            <p class="card-text">Ut egestas rutrum nunc hendrerit facilisis. Nulla fringilla dictum
+                                felis, a ornare eros eleifend cursus. Ut dignissim libero enim. Vestibulum ante ipsum
+                                primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+                            <footer class="blockquote-footer mt-3">23rd April 2023</footer>
                         </div>
-                        <p class="card-text">Ut egestas rutrum nunc hendrerit facilisis. Nulla fringilla dictum felis, a ornare eros eleifend cursus. Ut dignissim libero enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
-                        <footer class="blockquote-footer mt-3">23rd April 2023</footer>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-4" style="background-color: #FFF1F1;">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="avatar me-4">
+                                        <img src="./image/customer-image-02.jpg" width="50px" class="rounded-circle"
+                                            alt="">
+                                    </div>
+                                    <div class="name">
+                                        <h5 class="card-title fw-bold">Viktorya Katar</h5>
+                                        <h6 class="card-subtitle text-muted">- Manager</h6>
+                                    </div>
+                                </div>
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50"
+                                        height="50">
+                                        <path
+                                            d="M42.82,51.76c-.34,14.06-6.8,25.08-18.38,33a39.22,39.22,0,0,1-22,6.87c-.24,0-.51,0-.75,0V77.85c1.35-.08,2.71,0,4-.24a27.5,27.5,0,0,0,22.94-22c.35-1.69.41-3.43.61-5.22H1.71V9.27c.34,0,.69-.06,1-.06H42.88c0,.33,0,.53,0,.75C42.92,23.89,43.16,37.83,42.82,51.76Z"
+                                            fill="#FF6A66"></path>
+                                        <path
+                                            d="M97.86,50.26c-.37,17.82-8.94,30.54-25,38.09a36.72,36.72,0,0,1-15.32,3.27h-.7V78a27.33,27.33,0,0,0,22.1-11.38,26.72,26.72,0,0,0,5.28-16.14H56.77V9.27H97.92v1C97.92,23.58,98.14,36.92,97.86,50.26Z"
+                                            fill="#FF6A66"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="card-text">Ut egestas rutrum nunc hendrerit facilisis. Nulla fringilla dictum
+                                felis, a ornare eros eleifend cursus. Ut dignissim libero enim. Vestibulum ante ipsum
+                                primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+                            <footer class="blockquote-footer mt-3">23rd April 2023</footer>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-4" style="background-color: #FFF1F1;">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="avatar me-4">
+                                        <img src="./image/customer-image-02.jpg" width="50px" class="rounded-circle"
+                                            alt="">
+                                    </div>
+                                    <div class="name">
+                                        <h5 class="card-title fw-bold">Viktorya Katar</h5>
+                                        <h6 class="card-subtitle text-muted">- Manager</h6>
+                                    </div>
+                                </div>
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50"
+                                        height="50">
+                                        <path
+                                            d="M42.82,51.76c-.34,14.06-6.8,25.08-18.38,33a39.22,39.22,0,0,1-22,6.87c-.24,0-.51,0-.75,0V77.85c1.35-.08,2.71,0,4-.24a27.5,27.5,0,0,0,22.94-22c.35-1.69.41-3.43.61-5.22H1.71V9.27c.34,0,.69-.06,1-.06H42.88c0,.33,0,.53,0,.75C42.92,23.89,43.16,37.83,42.82,51.76Z"
+                                            fill="#FF6A66"></path>
+                                        <path
+                                            d="M97.86,50.26c-.37,17.82-8.94,30.54-25,38.09a36.72,36.72,0,0,1-15.32,3.27h-.7V78a27.33,27.33,0,0,0,22.1-11.38,26.72,26.72,0,0,0,5.28-16.14H56.77V9.27H97.92v1C97.92,23.58,98.14,36.92,97.86,50.26Z"
+                                            fill="#FF6A66"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="card-text">Ut egestas rutrum nunc hendrerit facilisis. Nulla fringilla dictum
+                                felis, a ornare eros eleifend cursus. Ut dignissim libero enim. Vestibulum ante ipsum
+                                primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+                            <footer class="blockquote-footer mt-3">23rd April 2023</footer>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Row 2 -->
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-4" style="background-color: #FFF1F1;">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="avatar me-4">
+                                        <img src="./image/customer-image-02.jpg" width="50px" class="rounded-circle"
+                                            alt="">
+                                    </div>
+                                    <div class="name">
+                                        <h5 class="card-title fw-bold">Viktorya Katar</h5>
+                                        <h6 class="card-subtitle text-muted">- Manager</h6>
+                                    </div>
+                                </div>
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50"
+                                        height="50">
+                                        <path
+                                            d="M42.82,51.76c-.34,14.06-6.8,25.08-18.38,33a39.22,39.22,0,0,1-22,6.87c-.24,0-.51,0-.75,0V77.85c1.35-.08,2.71,0,4-.24a27.5,27.5,0,0,0,22.94-22c.35-1.69.41-3.43.61-5.22H1.71V9.27c.34,0,.69-.06,1-.06H42.88c0,.33,0,.53,0,.75C42.92,23.89,43.16,37.83,42.82,51.76Z"
+                                            fill="#FF6A66"></path>
+                                        <path
+                                            d="M97.86,50.26c-.37,17.82-8.94,30.54-25,38.09a36.72,36.72,0,0,1-15.32,3.27h-.7V78a27.33,27.33,0,0,0,22.1-11.38,26.72,26.72,0,0,0,5.28-16.14H56.77V9.27H97.92v1C97.92,23.58,98.14,36.92,97.86,50.26Z"
+                                            fill="#FF6A66"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="card-text">Ut egestas rutrum nunc hendrerit facilisis. Nulla fringilla dictum
+                                felis, a ornare eros eleifend cursus. Ut dignissim libero enim. Vestibulum ante ipsum
+                                primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+                            <footer class="blockquote-footer mt-3">23rd April 2023</footer>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-4" style="background-color: #FFF1F1;">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="avatar me-4">
+                                        <img src="./image/customer-image-02.jpg" width="50px" class="rounded-circle"
+                                            alt="">
+                                    </div>
+                                    <div class="name">
+                                        <h5 class="card-title fw-bold">Viktorya Katar</h5>
+                                        <h6 class="card-subtitle text-muted">- Manager</h6>
+                                    </div>
+                                </div>
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50"
+                                        height="50">
+                                        <path
+                                            d="M42.82,51.76c-.34,14.06-6.8,25.08-18.38,33a39.22,39.22,0,0,1-22,6.87c-.24,0-.51,0-.75,0V77.85c1.35-.08,2.71,0,4-.24a27.5,27.5,0,0,0,22.94-22c.35-1.69.41-3.43.61-5.22H1.71V9.27c.34,0,.69-.06,1-.06H42.88c0,.33,0,.53,0,.75C42.92,23.89,43.16,37.83,42.82,51.76Z"
+                                            fill="#FF6A66"></path>
+                                        <path
+                                            d="M97.86,50.26c-.37,17.82-8.94,30.54-25,38.09a36.72,36.72,0,0,1-15.32,3.27h-.7V78a27.33,27.33,0,0,0,22.1-11.38,26.72,26.72,0,0,0,5.28-16.14H56.77V9.27H97.92v1C97.92,23.58,98.14,36.92,97.86,50.26Z"
+                                            fill="#FF6A66"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="card-text">Ut egestas rutrum nunc hendrerit facilisis. Nulla fringilla dictum
+                                felis, a ornare eros eleifend cursus. Ut dignissim libero enim. Vestibulum ante ipsum
+                                primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+                            <footer class="blockquote-footer mt-3">23rd April 2023</footer>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-4" style="background-color: #FFF1F1;">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="avatar me-4">
+                                        <img src="./image/customer-image-02.jpg" width="50px" class="rounded-circle"
+                                            alt="">
+                                    </div>
+                                    <div class="name">
+                                        <h5 class="card-title fw-bold">Viktorya Katar</h5>
+                                        <h6 class="card-subtitle text-muted">- Manager</h6>
+                                    </div>
+                                </div>
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50"
+                                        height="50">
+                                        <path
+                                            d="M42.82,51.76c-.34,14.06-6.8,25.08-18.38,33a39.22,39.22,0,0,1-22,6.87c-.24,0-.51,0-.75,0V77.85c1.35-.08,2.71,0,4-.24a27.5,27.5,0,0,0,22.94-22c.35-1.69.41-3.43.61-5.22H1.71V9.27c.34,0,.69-.06,1-.06H42.88c0,.33,0,.53,0,.75C42.92,23.89,43.16,37.83,42.82,51.76Z"
+                                            fill="#FF6A66"></path>
+                                        <path
+                                            d="M97.86,50.26c-.37,17.82-8.94,30.54-25,38.09a36.72,36.72,0,0,1-15.32,3.27h-.7V78a27.33,27.33,0,0,0,22.1-11.38,26.72,26.72,0,0,0,5.28-16.14H56.77V9.27H97.92v1C97.92,23.58,98.14,36.92,97.86,50.26Z"
+                                            fill="#FF6A66"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="card-text">Ut egestas rutrum nunc hendrerit facilisis. Nulla fringilla dictum
+                                felis, a ornare eros eleifend cursus. Ut dignissim libero enim. Vestibulum ante ipsum
+                                primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+                            <footer class="blockquote-footer mt-3">23rd April 2023</footer>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body p-4" style="background-color: #FFF1F1;">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="avatar me-4">
-                                    <img src="./image/customer-image-02.jpg" width="50px" class="rounded-circle" alt="">
-                                </div>
-                                <div class="name">
-                                    <h5 class="card-title fw-bold">Viktorya Katar</h5>
-                                    <h6 class="card-subtitle text-muted">- Manager</h6>
-                                </div>
-                            </div>
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50">
-                                    <path d="M42.82,51.76c-.34,14.06-6.8,25.08-18.38,33a39.22,39.22,0,0,1-22,6.87c-.24,0-.51,0-.75,0V77.85c1.35-.08,2.71,0,4-.24a27.5,27.5,0,0,0,22.94-22c.35-1.69.41-3.43.61-5.22H1.71V9.27c.34,0,.69-.06,1-.06H42.88c0,.33,0,.53,0,.75C42.92,23.89,43.16,37.83,42.82,51.76Z" fill="#FF6A66"></path>
-                                    <path d="M97.86,50.26c-.37,17.82-8.94,30.54-25,38.09a36.72,36.72,0,0,1-15.32,3.27h-.7V78a27.33,27.33,0,0,0,22.1-11.38,26.72,26.72,0,0,0,5.28-16.14H56.77V9.27H97.92v1C97.92,23.58,98.14,36.92,97.86,50.26Z" fill="#FF6A66"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <p class="card-text">Ut egestas rutrum nunc hendrerit facilisis. Nulla fringilla dictum felis, a ornare eros eleifend cursus. Ut dignissim libero enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
-                        <footer class="blockquote-footer mt-3">23rd April 2023</footer>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body p-4" style="background-color: #FFF1F1;">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="avatar me-4">
-                                    <img src="./image/customer-image-02.jpg" width="50px" class="rounded-circle" alt="">
-                                </div>
-                                <div class="name">
-                                    <h5 class="card-title fw-bold">Viktorya Katar</h5>
-                                    <h6 class="card-subtitle text-muted">- Manager</h6>
-                                </div>
-                            </div>
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50">
-                                    <path d="M42.82,51.76c-.34,14.06-6.8,25.08-18.38,33a39.22,39.22,0,0,1-22,6.87c-.24,0-.51,0-.75,0V77.85c1.35-.08,2.71,0,4-.24a27.5,27.5,0,0,0,22.94-22c.35-1.69.41-3.43.61-5.22H1.71V9.27c.34,0,.69-.06,1-.06H42.88c0,.33,0,.53,0,.75C42.92,23.89,43.16,37.83,42.82,51.76Z" fill="#FF6A66"></path>
-                                    <path d="M97.86,50.26c-.37,17.82-8.94,30.54-25,38.09a36.72,36.72,0,0,1-15.32,3.27h-.7V78a27.33,27.33,0,0,0,22.1-11.38,26.72,26.72,0,0,0,5.28-16.14H56.77V9.27H97.92v1C97.92,23.58,98.14,36.92,97.86,50.26Z" fill="#FF6A66"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <p class="card-text">Ut egestas rutrum nunc hendrerit facilisis. Nulla fringilla dictum felis, a ornare eros eleifend cursus. Ut dignissim libero enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
-                        <footer class="blockquote-footer mt-3">23rd April 2023</footer>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row mt-4">
-            <!-- Row 2 -->
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body p-4" style="background-color: #FFF1F1;">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="avatar me-4">
-                                    <img src="./image/customer-image-02.jpg" width="50px" class="rounded-circle" alt="">
-                                </div>
-                                <div class="name">
-                                    <h5 class="card-title fw-bold">Viktorya Katar</h5>
-                                    <h6 class="card-subtitle text-muted">- Manager</h6>
-                                </div>
-                            </div>
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50">
-                                    <path d="M42.82,51.76c-.34,14.06-6.8,25.08-18.38,33a39.22,39.22,0,0,1-22,6.87c-.24,0-.51,0-.75,0V77.85c1.35-.08,2.71,0,4-.24a27.5,27.5,0,0,0,22.94-22c.35-1.69.41-3.43.61-5.22H1.71V9.27c.34,0,.69-.06,1-.06H42.88c0,.33,0,.53,0,.75C42.92,23.89,43.16,37.83,42.82,51.76Z" fill="#FF6A66"></path>
-                                    <path d="M97.86,50.26c-.37,17.82-8.94,30.54-25,38.09a36.72,36.72,0,0,1-15.32,3.27h-.7V78a27.33,27.33,0,0,0,22.1-11.38,26.72,26.72,0,0,0,5.28-16.14H56.77V9.27H97.92v1C97.92,23.58,98.14,36.92,97.86,50.26Z" fill="#FF6A66"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <p class="card-text">Ut egestas rutrum nunc hendrerit facilisis. Nulla fringilla dictum felis, a ornare eros eleifend cursus. Ut dignissim libero enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
-                        <footer class="blockquote-footer mt-3">23rd April 2023</footer>
-                    </div>
-                </div>
-            </div> <div class="col-md-4 mb-4">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body p-4" style="background-color: #FFF1F1;">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="avatar me-4">
-                                    <img src="./image/customer-image-02.jpg" width="50px" class="rounded-circle" alt="">
-                                </div>
-                                <div class="name">
-                                    <h5 class="card-title fw-bold">Viktorya Katar</h5>
-                                    <h6 class="card-subtitle text-muted">- Manager</h6>
-                                </div>
-                            </div>
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50">
-                                    <path d="M42.82,51.76c-.34,14.06-6.8,25.08-18.38,33a39.22,39.22,0,0,1-22,6.87c-.24,0-.51,0-.75,0V77.85c1.35-.08,2.71,0,4-.24a27.5,27.5,0,0,0,22.94-22c.35-1.69.41-3.43.61-5.22H1.71V9.27c.34,0,.69-.06,1-.06H42.88c0,.33,0,.53,0,.75C42.92,23.89,43.16,37.83,42.82,51.76Z" fill="#FF6A66"></path>
-                                    <path d="M97.86,50.26c-.37,17.82-8.94,30.54-25,38.09a36.72,36.72,0,0,1-15.32,3.27h-.7V78a27.33,27.33,0,0,0,22.1-11.38,26.72,26.72,0,0,0,5.28-16.14H56.77V9.27H97.92v1C97.92,23.58,98.14,36.92,97.86,50.26Z" fill="#FF6A66"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <p class="card-text">Ut egestas rutrum nunc hendrerit facilisis. Nulla fringilla dictum felis, a ornare eros eleifend cursus. Ut dignissim libero enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
-                        <footer class="blockquote-footer mt-3">23rd April 2023</footer>
-                    </div>
-                </div>
-            </div> <div class="col-md-4 mb-4">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body p-4" style="background-color: #FFF1F1;">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="avatar me-4">
-                                    <img src="./image/customer-image-02.jpg" width="50px" class="rounded-circle" alt="">
-                                </div>
-                                <div class="name">
-                                    <h5 class="card-title fw-bold">Viktorya Katar</h5>
-                                    <h6 class="card-subtitle text-muted">- Manager</h6>
-                                </div>
-                            </div>
-                            <div class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50">
-                                    <path d="M42.82,51.76c-.34,14.06-6.8,25.08-18.38,33a39.22,39.22,0,0,1-22,6.87c-.24,0-.51,0-.75,0V77.85c1.35-.08,2.71,0,4-.24a27.5,27.5,0,0,0,22.94-22c.35-1.69.41-3.43.61-5.22H1.71V9.27c.34,0,.69-.06,1-.06H42.88c0,.33,0,.53,0,.75C42.92,23.89,43.16,37.83,42.82,51.76Z" fill="#FF6A66"></path>
-                                    <path d="M97.86,50.26c-.37,17.82-8.94,30.54-25,38.09a36.72,36.72,0,0,1-15.32,3.27h-.7V78a27.33,27.33,0,0,0,22.1-11.38,26.72,26.72,0,0,0,5.28-16.14H56.77V9.27H97.92v1C97.92,23.58,98.14,36.92,97.86,50.26Z" fill="#FF6A66"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <p class="card-text">Ut egestas rutrum nunc hendrerit facilisis. Nulla fringilla dictum felis, a ornare eros eleifend cursus. Ut dignissim libero enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
-                        <footer class="blockquote-footer mt-3">23rd April 2023</footer>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
     <footer class="py-5">
         <div class="container">
-                    <div class="row">
-                        <div class="col-md-3 mb-2 mb-md-0 p-4">
-                            <h5 class="text-uppercase fw-bold fs-5 pb-4 border-bottom 1px solid white"><i class="color-icon me-2 fa-solid fa-circle-exclamation"></i>Quick Links</h5>
-                            <ul class="list-unstyled">
-                                <li class="py-1"><a href="#" class="text-dark">Home</a></li>
-                                <li class="py-1"><a href="#" class="text-dark">Services</a></li>
-                                <li class="py-1"><a href="#" class="text-dark">Contact</a></li>
-                                <li class="py-1"><a href="#" class="text-dark">About</a></li>
-                                <li class="py-1"><a href="#" class="text-dark">Home</a></li>
-                                <li class="py-1"><a href="#" class="text-dark">Services</a></li>
-                                <li class="py-1"><a href="#" class="text-dark">Contact</a></li>
-                                <li class="py-1"><a href="#" class="text-dark">About</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 mb-2 mb-md-0 p-4">
-                            <h5 class="text-uppercase fw-bold fs-5 pb-4 border-bottom 1px solid white"><i class="color-icon me-2 fa-regular fa-hard-drive"></i>Services</h5>
-                              <ul class="list-unstyled">
-                                <li class="py-1"><a href="#" class="text-dark">Home</a></li>
-                                <li class="py-1"><a href="#" class="text-dark">Services</a></li>
-                                <li class="py-1"><a href="#" class="text-dark">Contact</a></li>
-                                <li class="py-1"><a href="#" class="text-dark">About</a></li>
-                                <li class="py-1"><a href="#" class="text-dark">Home</a></li>
-                                <li class="py-1"><a href="#" class="text-dark">Services</a></li>
-                                <li class="py-1"><a href="#" class="text-dark">Contact</a></li>
-                                <li class="py-1"><a href="#" class="text-dark">About</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 mb-2 mb-md-0 p-4">
-                            <h5 class="text-uppercase fw-bold fs-5 pb-4 border-bottom 1px solid white"><i class="color-icon me-2 fa-regular fa-credit-card"></i>Payment</h5>
-                              <ul class="list-unstyled">
-                                <li class="py-1"> <img src="./image/Payment-1.png" class="me-1" alt=""> <a href="#" class="text-dark">Paypal</a></li>
-                                <li class="py-1"> <img src="./image/Payment-2.png" class="me-1" alt=""> <a href="#" class="text-dark">Visa</a></li>
-                                <li class="py-1"> <img src="./image/Payment-3.png" class="me-1" alt=""> <a href="#" class="text-dark">Mastercard</a></li>
-                                <li class="py-1"> <img src="./image/Payment-4.png" class="me-1" alt=""> <a href="#" class="text-dark">American Express</a></li>
-                                <li class="py-1"> <img src="./image/Payment-5.png" class="me-1" alt=""> <a href="#" class="text-dark">RuPay</a></li>
-                                <li class="py-1"> <img src="./image/Payment-6.png" class="me-1" alt=""> <a href="#" class="text-dark">Net Banking</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 mb-2 mb-md-0 p-4">
-                            <h5 class="text-uppercase fw-bold fs-5 pb-4 border-bottom 1px solid white"><i class="color-icon me-2 fa-solid fa-truck-fast"></i>Shipping</h5>
-                              <ul class="list-unstyled">
-                                <li class="py-1 d-flex align-items-center">
-                                    <div class="text-dark d-flex align-items-center">
-                                        <div class="row">
-                                            <div class="col-2"> <i class="color-icon fa-regular fa-address-card me-3 fs-4"></i></div>
-                                            <div class="col-10"><div>
-                                                <h6 class="mb-0">Express Shipping</h6>
-                                                <p class="mb-0">3-6 Business Days</p>
-                                            </div></div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-3 mb-2 mb-md-0 p-4">
+                    <h5 class="text-uppercase fw-bold fs-5 pb-4 border-bottom 1px solid white"><i
+                            class="color-icon me-2 fa-solid fa-circle-exclamation"></i>Quick Links</h5>
+                    <ul class="list-unstyled fw-medium">
+                        <li class="py-1"><a href="#" class="text-dark">About Us</a></li>
+                        <li class="py-1"><a href="#" class="text-dark">Contact Us</a></li>
+                        <li class="py-1"><a href="#" class="text-dark">Corporate Enquiries</a></li>
+                        <li class="py-1"><a href="#" class="text-dark">Intellectual Property</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 mb-2 mb-md-0 p-4">
+                    <h5 class="text-uppercase fw-bold fs-5 pb-4 border-bottom 1px solid white"><i
+                            class="color-icon me-2 fa-regular fa-hard-drive"></i>Services</h5>
+                    <ul class="list-unstyled fw-medium">
+                        <li class="py-1"><a href="#" class="text-dark">Brands List</a></li>
+                        <li class="py-1"><a href="#" class="text-dark">Customer Reviews</a></li>
+                        <li class="py-1"><a href="#" class="text-dark">Return Policy</a></li>
+                        <li class="py-1"><a href="#" class="text-dark">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 mb-2 mb-md-0 p-4">
+                    <h5 class="text-uppercase fw-bold fs-5 pb-4 border-bottom 1px solid white"><i
+                            class="color-icon me-2 fa-regular fa-credit-card"></i>Payment</h5>
+                    <ul class="list-unstyled fw-medium">
+                        <li class="py-1"> <img src="./image/Payment-1.png" class="me-1" alt=""> <a href="#"
+                                class="text-dark">Paypal</a></li>
+                        <li class="py-1"> <img src="./image/Payment-3.png" class="me-1" alt=""> <a href="#"
+                                class="text-dark">Mastercard</a></li>
+                        <li class="py-1"> <img src="./image/Payment-6.png" class="me-1" alt=""> <a href="#"
+                                class="text-dark">Net Banking</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 mb-2 mb-md-0 p-4">
+                    <h5 class="text-uppercase fw-bold fs-5 pb-4 border-bottom 1px solid white"><i
+                            class="color-icon me-2 fa-solid fa-truck-fast"></i>Shipping</h5>
+                    <ul class="list-unstyled fw-medium">
+                        <li class="py-1 d-flex align-items-center">
+                            <div class="text-dark d-flex align-items-center">
+                                <div class="row">
+                                    <div class="col-2"> <i class="color-icon fa-regular fa-address-card me-3 fs-4"></i>
+                                    </div>
+                                    <div class="col-10">
+                                        <div>
+                                            <h6 class="mb-0">Express Shipping</h6>
+                                            <p class="mb-0">3-6 Business Days</p>
                                         </div>
                                     </div>
-                                </li>                                
-                                <li class="py-1 d-flex align-items-center">
-                                    <div class="text-dark d-flex align-items-center">
-                                        <div class="row">
-                                            <div class="col-2"><i class="color-icon fa-regular fa-address-book me-3 fs-4"></i></div>
-                                            <div class="col-10"><div>
-                                                <h6 class="mb-0">Standard Shipping</h6>
-                                                <p class="mb-0">10+Business Days</p>
-                                            </div></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="py-1 d-flex align-items-center">
+                            <div class="text-dark d-flex align-items-center">
+                                <div class="row">
+                                    <div class="col-2"><i class="color-icon fa-regular fa-address-book me-3 fs-4"></i>
+                                    </div>
+                                    <div class="col-10">
+                                        <div>
+                                            <h6 class="mb-0">Standard Shipping</h6>
+                                            <p class="mb-0">10+Business Days</p>
                                         </div>
                                     </div>
-                                </li>      
-                                <li class="py-1 pt-3 d-flex align-items-center border-bottom 1px solid white pb-3"><i class="color-icon fa-solid fa-headset me-3 fs-4"></i><h4 class="text-uppercase m-0">Stay Connected</h4></li>
-                                <li class="py-1 pt-3"> 
-                                    <form>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control border-0 border-bottom border-dark rounded-0" placeholder="Your Text Here">
-                                        <button type="submit" class="bg-transparent border-0 border-bottom border-dark rounded-0">
-                                            <i class="color-icon fa-brands fa-telegram fs-1"></i>
-                                        </button>
-                                    </div>
-                                </form>
-                                <p class="fs-6">Join our list and get 15% off your first purchase!</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="container py-4 border-top d-flex justify-content-center align-items-center">
-                        <img src="./image/logo_PRESSIFY_big.png" height="80px" alt="Logo">
-                    </div>
-                    
-
+                                </div>
+                            </div>
+                        </li>
+                        <li class="py-1 pt-3 d-flex align-items-center border-bottom 1px solid white pb-3"><i
+                                class="color-icon fa-solid fa-headset me-3 fs-4"></i>
+                            <h4 class="text-uppercase m-0">Stay Connected</h4>
+                        </li>
+                        <li class="py-1 pt-3">
+                            <p class="fs-6 text-secondary">Join our list and get 15% off your first purchase!</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <div class="container pt-4 border-top">
                 <div class="row">
                     <div class="col-md-6 mb-3 mb-md-0 text-center text-md-start">
-                        <p class="mb-0">&copy; 2024 Your Company. All Rights Reserved.</p>
+                        <p class="mb-0">&copy; 2024 Pressify. All Rights Reserved.</p>
                     </div>
-                    <div class="col-md-6 mb-3 mb-md-0 text-center text-md-end d-flex justify-content-center justify-content-md-end align-items-center gap-2">
+                    <div
+                        class="col-md-6 mb-3 mb-md-0 text-center text-md-end d-flex justify-content-center justify-content-md-end align-items-center gap-2">
                         <p class="mb-0">Follow Us</p>
-                        <div class="color-icon text-center text-white rounded-circle p-2" style="width:40px; height: 40px">
-                            <a href="#" class="text-white d-flex align-items-center justify-content-center h-100 w-100 text-decoration-none">
+                        <div class="bg-icon text-center text-white rounded-circle p-2"
+                            style="width:40px; height: 40px">
+                            <a href="#"
+                                class="text-white d-flex align-items-center justify-content-center h-100 w-100 text-decoration-none">
                                 <i class="fa-brands fa-facebook-f"></i>
                             </a>
                         </div>
-                        <div class="color-icon text-center text-white rounded-circle p-2" style="width:40px; height: 40px">
-                            <a href="#" class="text-white d-flex align-items-center justify-content-center h-100 w-100 text-decoration-none">
+                        <div class="bg-icon text-center text-white rounded-circle p-2"
+                            style="width:40px; height: 40px">
+                            <a href="#"
+                                class="text-white d-flex align-items-center justify-content-center h-100 w-100 text-decoration-none">
                                 <i class="fa-brands fa-twitter"></i>
                             </a>
                         </div>
-                        <div class="color-icon text-center text-white rounded-circle p-2" style="width:40px; height: 40px">
-                            <a href="#" class="text-white d-flex align-items-center justify-content-center h-100 w-100 text-decoration-none">
+                        <div class="bg-icon text-center text-white rounded-circle p-2"
+                            style="width:40px; height: 40px">
+                            <a href="#"
+                                class="text-white d-flex align-items-center justify-content-center h-100 w-100 text-decoration-none">
                                 <i class="fa-brands fa-youtube"></i>
                             </a>
                         </div>
-                        <div class="color-icon text-center text-white rounded-circle p-2" style="width:40px; height: 40px">
-                            <a href="#" class="text-white d-flex align-items-center justify-content-center h-100 w-100 text-decoration-none">
+                        <div class="bg-icon text-center text-white rounded-circle p-2"
+                            style="width:40px; height: 40px">
+                            <a href="#"
+                                class="text-white d-flex align-items-center justify-content-center h-100 w-100 text-decoration-none">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
                         </div>
-                        
+
                     </div>
-                    
                 </div>
             </div>
         </div>
     </footer>
 </body>
+
 </html>
